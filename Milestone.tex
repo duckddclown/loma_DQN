@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage{xcolor}
+
+\title{DQN and DDPS in Loma Milestone}
+\author{Ziyuan Lin}
+\date{2025.5.26}
+
+\begin{document}
+\maketitle
+\section{Data Preprocessing}
+I have downloaded the Arcade Learning Environment(ALE), which is an environment for game simulation. The frames are captured dynamically through playing.
+I reduced the input dimensionality to $84 \times 84$. The frames byte streams flowing into the loma pipeline. I use four frames as a stack to the loma.
+The evaluation code is also available now.
+\section{Loma Part}
+I implemented the matrix operation already. The differentiation code is generated. Since all normal functions are implemented in Loma, I do not need to consider about the
+non-linear function implementation. 
+\section{Next Step}
+The next step will be convolution, which will be more difficult to implement. Then I need to stack the network and start training and inference.
+
+
+\end{document}
